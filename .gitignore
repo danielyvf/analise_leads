@@ -1,0 +1,14 @@
+# Pastas de cache do Python
+__pycache__/
+*.pyc
+
+# Ambiente virtual
+venv/
+.env/
+
+# Dados grandes
+*.csv
+*.xlsx
+
+# Arquivos temporários
+*.log
