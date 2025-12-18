@@ -33,3 +33,13 @@ Antes de começar, verifique se você tem as seguintes ferramentas instaladas no
 - **Git**
 
 Além disso, é necessário instalar algumas dependências, que podem ser feitas com o `pip`.
+
+- **streamlit**
+- **pandas**
+- **Altair**
+- **Numpay**
+- **matplotlib**
+- **seaborn**
+- **uvicorn**
+- **fastapi**
+- **pydeck**
