@@ -43,4 +43,13 @@ Além disso, é necessário instalar algumas dependências, que podem ser feitas
 - **uvicorn**
 - **fastapi**
 - **pydeck**
+HEAD
 correção manual
+=======
+
+![Descrição da imagem](https://i.imgur.com/E0CPKWO.jpeg)
+![Descrição da imagem](https://i.imgur.com/ASYejkB.jpeg)
+![Descrição da imagem](https://i.imgur.com/3FWlNXk.jpeg)
+![Descrição da imagem](https://i.imgur.com/BVAe3X3.jpeg)
+
+ b8299ee (Update README.md)
