@@ -43,3 +43,4 @@ Além disso, é necessário instalar algumas dependências, que podem ser feitas
 - **uvicorn**
 - **fastapi**
 - **pydeck**
+correção manual
