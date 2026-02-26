@@ -4,7 +4,7 @@ import os
 
 app = FastAPI()
 
-DATA_FOLDER = r"C:\Users\dvent\OneDrive\Documentos\pipeline_sdr\resultados_finais"
+DATA_FOLDER = r"./resultados_finais"
 
 @app.get("/")
 def read_root():

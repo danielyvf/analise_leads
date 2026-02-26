@@ -1,6 +1,8 @@
 # Pastas de cache do Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
 # Ambiente virtual
 venv/
@@ -10,5 +12,15 @@ venv/
 *.csv
 *.xlsx
 
+# Database
+*.db
+*.sqlite3
+
 # Arquivos temporários
 *.log
+docker-compose.override.yml
+
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+
+# Define o diretório de trabalho no container
+WORKDIR /app
+
+# Copia o código do dashboard (Streamlit) e os dados para o container
+COPY dashboard/ ./dashboard
+COPY resultados_finais/ ./resultados_finais
+
+# Copia o arquivo requirements.txt para o container
+COPY requirements.txt .
+
+# Instala as dependências do projeto
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expõe a porta 8501, onde o Streamlit vai rodar
+EXPOSE 8501
+
+# Define o comando para rodar o Streamlit
+CMD ["streamlit", "run", "dashboard/dashboard.py", "--server.port=8501", "--server.address=0.0.0.0"]

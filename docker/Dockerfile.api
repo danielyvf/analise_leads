@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+
+# Define o diretório de trabalho no container
+WORKDIR /app
+
+# Copia o código da API e os dados para o container
+COPY api/ ./api
+COPY resultados_finais/ ./resultados_finais
+
+# Copia o arquivo requirements.txt para o container
+COPY requirements.txt .
+
+# Instala as dependências do projeto
+RUN pip install --no-cache-dir -r requirements.txt
+
+# porta 8000, onde a API vai rodar
+EXPOSE 8000
+
+# Define o comando para rodar a FastAPI
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]

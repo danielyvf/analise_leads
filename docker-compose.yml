@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api  # Caminho para o Dockerfile da API
+    ports:
+      - "8000:8000"  # Expõe a API na porta 8000
+    volumes:
+      - ./resultados_finais:/app/resultados_finais  # Mapeia a pasta de dados para o container
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dashboard  # Caminho para o Dockerfile do Streamlit
+    ports:
+      - "8501:8501"  # Expõe o dashboard na porta 8501
+    environment:
+      - API_URL=http://api:8000  # Define a URL da API como o nome do serviço (api)
+    depends_on:
+      - api  # Garante que a API seja iniciada antes do dashboard
+    volumes:
+      - ./resultados_finais:/app/resultados_finais  # Mapeia a pasta de dados para o container
+    restart: unless-stopped

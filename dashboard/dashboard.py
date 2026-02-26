@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import requests
 import altair as alt
+import os
 
 # URL da API FastAPI
-API_URL = "http://127.0.0.1:8000/"
+API_URL = os.getenv("API_URL", "http://api:8000")
 
 # Título do Dashboard
 st.title("Dashboard SDR - Leads")
