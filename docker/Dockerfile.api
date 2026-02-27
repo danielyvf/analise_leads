@@ -1,11 +1,11 @@
 FROM python:3.11-slim
 
 # Define o diretório de trabalho no container
-WORKDIR /app
+WORKDIR /pipeline_sdr
 
 # Copia o código da API e os dados para o container
 COPY api/ ./api
-COPY resultados_finais/ ./resultados_finais
+COPY resultados_finais/ /pipeline_sdr/resultados_finais
 
 # Copia o arquivo requirements.txt para o container
 COPY requirements.txt .
